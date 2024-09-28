@@ -1,0 +1,12 @@
+#include <iostream>
+using namespace std;
+
+void greet(string name = "User") {
+    cout << "Hello, " << name << "!" << endl;
+}
+
+int main() {
+    greet();          // default argument will be used
+    greet("Alice");   // custom argument passed
+    return 0;
+}
