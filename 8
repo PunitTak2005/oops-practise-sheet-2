@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+class B;
+class A {
+ int data;
+public:
+ A() : data(10) {}
+ friend class B; // Declaring friend class
+};
+class B {
+public:
+ void display(A &obj) {
+ cout << "Value of A's data: " << obj.data << endl; // Access private data
+ }
+};
+int main() {
+ A a;
+ B b;
+ b.display(a);
+ return 0;
+}
